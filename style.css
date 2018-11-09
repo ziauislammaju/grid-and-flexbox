@@ -1,0 +1,222 @@
+body{background-color:dodgerblue;
+
+}
+h1{ color:darkgreen;
+
+}
+h2{
+    color: bisque;
+}
+
+h3{
+    color: purple;
+    font-style: italic;
+}
+p{
+    color:darkblue;
+    font-style:initial;
+    font:bold;
+    overflow: auto;
+}
+
+#grid-float {
+
+    background-color:darkred;
+
+}
+
+
+
+#grid-flex {
+
+    background-color: darkblue;
+
+}
+
+
+
+#grid-float {
+
+    float:left;
+
+}
+
+
+
+#grid-float .grid-item{
+
+    float: left;
+
+}
+
+
+
+#grid-flex{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+}   
+
+
+
+.grid-item{
+
+    background-color: honeydew;
+
+    margin: 0.25%;
+
+    padding: 2px;
+
+    list-style: none;
+
+    list-style-position: inside ;
+
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+
+    height: 33vw;
+
+}
+
+
+
+img{
+
+    float: right;
+
+    width: 10vw  ;
+
+    margin: 12px;
+
+}
+
+
+
+/* Desktop View */
+
+@media all and (min-width: 1001px){
+
+    #grid-float .grid-item:nth-child(1){
+
+        width: 48.5%;
+
+        background-color: #FFAEAE;
+
+    }
+
+    #grid-float .grid-item:nth-child(n+2){
+
+        width: 24%;
+
+    }
+
+    #grid-float .grid-item:nth-child(4n){
+
+        clear: left;
+
+    } 
+
+    #grid-flex .grid-item:nth-child(1){
+
+        width: 48.5%;
+
+        background-color: #FFAEAE;
+
+    }
+
+      #grid-flex .grid-item:nth-child(n+2){
+
+        width: 24%;
+
+    }
+
+}
+
+
+
+/* Tablet View */
+
+@media all and (min-width: 501px) and (max-width: 1000px){
+
+    #grid-float .grid-item:nth-child(n+1):nth-child(-n+2){
+
+        width: 48.5%;
+
+        background-color: black;
+
+    }
+
+    #grid-float .grid-item:nth-child(n+3){
+
+        width: 32%;
+
+    }
+
+    #grid-float .grid-item:nth-child(3n){
+
+        clear: left;
+
+    }
+
+    #grid-flex .grid-item:nth-child(n+1):nth-child(-n+2){
+
+        width: 48.5%;
+
+        background-color: black;
+
+      }
+
+    #grid-flex .grid-item:nth-child(n+3){
+
+        width: 32%;
+
+      }
+
+}
+
+
+
+/* Mobilephone View */
+
+@media all and (max-width: 500px){
+
+    #grid-float .grid-item:nth-child(1){
+
+        width: 98%;
+
+        background-color: black;
+
+    }
+
+    #grid-float .grid-item:nth-child(n+2){
+
+        width: 48%;
+
+    }
+
+    #grid-float .grid-item:nth-child(2n){
+
+        clear: left;
+
+    }
+
+    #grid-flex .grid-item:nth-child(1){
+
+        width: 98%;
+
+        background-color: black;
+
+        flex-grow: 5;
+
+        flex-shrink: 5;
+
+    }
+
+    #grid-flex .grid-item:nth-child(n+2){
+
+        width: 48%;
+
+    }
+
+}
